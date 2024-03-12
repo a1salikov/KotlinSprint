@@ -12,4 +12,12 @@ fun main(){
     println(hour)
     println(minute)
 
+    hour = 10
+
+    minute = 55
+
+    println("$hour:$minute")
+
+    //Метод print не делает перенос в конце строки
+
 }
