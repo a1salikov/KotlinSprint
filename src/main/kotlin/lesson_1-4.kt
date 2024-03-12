@@ -12,7 +12,7 @@ fun main(){
 
     val partOfYear: Double = 2.0547945205479453E-4
 
-    val apogee:Int = 327000
+    val apogee: Int = 327000
 
     println(length)
     println(age)
