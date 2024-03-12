@@ -8,4 +8,8 @@ fun main(){
 
     var minute = 7
 
+    println(year)
+    println(hour)
+    println(minute)
+
 }
