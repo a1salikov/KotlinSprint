@@ -10,4 +10,5 @@ fun main(){
 
     val seconds = totalSeconds / 60 / 60 % 60
 
+    println("${hour.toString().padStart(2, '0')}:${(minutes.toString().padStart(2, '0'))}:${(seconds.toString().padStart(2, '0'))}")
 }
