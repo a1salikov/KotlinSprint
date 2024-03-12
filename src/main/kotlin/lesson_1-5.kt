@@ -8,6 +8,8 @@ fun main(){
 
     val seconds = TOTAL_SECONDS % SECONDS_IN_MINUTE % MINUTES_IN_HOUR
 
+    println(String.format("%02d:%02d:%02d", hour, minutes, seconds))
+
 }
 
 const val TOTAL_SECONDS = 6480
