@@ -2,20 +2,17 @@ package org.example
 
 fun main(){
 
-    val hour = TOTAL_SECONDS / SECONDS_IN_HOUR
+    val totalSeconds = 6480
 
-    val minutes = TOTAL_SECONDS / MINUTES_IN_HOUR % SECONDS_IN_MINUTE
+    val hour = totalSeconds / SECONDS_IN_HOUR
 
-    val seconds = TOTAL_SECONDS % SECONDS_IN_MINUTE % MINUTES_IN_HOUR
+    val minutes = totalSeconds / PARTS_IN_HOUR_OR_MINUTE % PARTS_IN_HOUR_OR_MINUTE
+
+    val seconds = totalSeconds % PARTS_IN_HOUR_OR_MINUTE % PARTS_IN_HOUR_OR_MINUTE
 
     println(String.format("%02d:%02d:%02d", hour, minutes, seconds))
 
 }
 
-const val TOTAL_SECONDS = 6480
-
 const val SECONDS_IN_HOUR = 3600
-
-const val MINUTES_IN_HOUR = 60
-
-const val SECONDS_IN_MINUTE = 60
+const val PARTS_IN_HOUR_OR_MINUTE = 60
