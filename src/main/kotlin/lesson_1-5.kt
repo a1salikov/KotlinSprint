@@ -2,13 +2,18 @@ package org.example
 
 fun main(){
 
-    val totalSeconds = 6480
+    val hour = TOTAL_SECONDS / SECONDS_IN_HOUR
 
-    val hour = totalSeconds / 3600
+    val minutes = TOTAL_SECONDS / MINUTES_IN_HOUR % SECONDS_IN_MINUTE
 
-    val minutes = totalSeconds / 60 % 60
+    val seconds = TOTAL_SECONDS % SECONDS_IN_MINUTE % MINUTES_IN_HOUR
 
-    val seconds = totalSeconds / 60 / 60 % 60
-
-    println("${hour.toString().padStart(2, '0')}:${(minutes.toString().padStart(2, '0'))}:${(seconds.toString().padStart(2, '0'))}")
 }
+
+const val TOTAL_SECONDS = 6480
+
+const val SECONDS_IN_HOUR = 3600
+
+const val MINUTES_IN_HOUR = 60
+
+const val SECONDS_IN_MINUTE = 60
